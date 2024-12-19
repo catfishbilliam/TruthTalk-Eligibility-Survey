@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthTalk Study Qualification Survey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="radio"], textarea {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script type="text/javascript" src="https://s3.amazonaws.com/mturk-public/externalHIT_v1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>TruthTalk Study Qualification Survey</h1>
+
+        <form id="mturk_form" method="post" action="https://workersandbox.mturk.com/mturk/externalSubmit">
+            <!-- Assignment ID -->
+            <input type="hidden" id="assignmentId" name="assignmentId" value="">
+
+            <!-- Age Requirement -->
+            <div class="section">
+                <h2>1. Age Requirement</h2>
+                <label>Are you 18 years of age or older?</label>
+                <input type="radio" name="age" value="yes" required> Yes<br>
+                <input type="radio" name="age" value="no" required> No
+            </div>
+
+            <!-- Political Affiliation -->
+            <div class="section">
+                <h2>2. Political Affiliation</h2>
+                <label>How do you identify politically?</label>
+                <input type="radio" name="political_affiliation" value="republican" required> Republican<br>
+                <input type="radio" name="political_affiliation" value="democrat" required> Democrat<br>
+                <input type="radio" name="political_affiliation" value="independent" required> Independent<br>
+                <input type="radio" name="political_affiliation" value="libertarian" required> Libertarian<br>
+                <input type="radio" name="political_affiliation" value="other" required> Other<br>
+                <input type="radio" name="political_affiliation" value="prefer_not_to_say" required> Prefer not to say<br><br>
+
+                <label>Did you support or vote for Donald Trump in the 2020 U.S. Presidential Election?</label>
+                <input type="radio" name="trump_support" value="yes" required> Yes<br>
+                <input type="radio" name="trump_support" value="no" required> No<br>
+                <input type="radio" name="trump_support" value="prefer_not_to_say" required> Prefer not to say
+            </div>
+
+            <!-- Belief in 2020 Election Integrity -->
+            <div class="section">
+                <h2>3. Belief in 2020 Election Integrity</h2>
+                <label>Do you believe there were irregularities or fraud in the 2020 U.S. Presidential Election?</label>
+                <input type="radio" name="election_fraud" value="widespread" required> Yes, widespread fraud occurred that altered the outcome.<br>
+                <input type="radio" name="election_fraud" value="minor" required> Yes, minor fraud occurred but did not change the result.<br>
+                <input type="radio" name="election_fraud" value="none" required> No, I do not believe any significant fraud occurred.<br>
+                <input type="radio" name="election_fraud" value="unsure" required> I’m uncertain about fraud or irregularities.<br><br>
+
+                <label>How strongly do you agree with the statement, "The 2020 election was not conducted fairly"?</label>
+                <input type="radio" name="belief_strength" value="strongly_agree" required> Strongly agree<br>
+                <input type="radio" name="belief_strength" value="somewhat_agree" required> Somewhat agree<br>
+                <input type="radio" name="belief_strength" value="neutral" required> Neutral<br>
+                <input type="radio" name="belief_strength" value="somewhat_disagree" required> Somewhat disagree<br>
+                <input type="radio" name="belief_strength" value="strongly_disagree" required> Strongly disagree<br><br>
+
+                <label>On a scale of 1 to 5, how confident are you in the overall accuracy of the 2020 election results?</label>
+                <input type="radio" name="confidence" value="1" required> 1 (No confidence)<br>
+                <input type="radio" name="confidence" value="2" required> 2 (Low confidence)<br>
+                <input type="radio" name="confidence" value="3" required> 3 (Neutral)<br>
+                <input type="radio" name="confidence" value="4" required> 4 (High confidence)<br>
+                <input type="radio" name="confidence" value="5" required> 5 (Very high confidence)
+            </div>
+
+            <!-- U.S. Residency -->
+            <div class="section">
+                <h2>4. U.S. Residency</h2>
+                <label>Are you currently a resident of the United States?</label>
+                <input type="radio" name="us_residency" value="yes" required> Yes<br>
+                <input type="radio" name="us_residency" value="no" required> No
+            </div>
+
+            <!-- Internet and Computer Skills -->
+            <div class="section">
+                <h2>5. Internet and Computer Skills</h2>
+                <label>Do you feel comfortable navigating websites and using basic computer functions?</label>
+                <input type="radio" name="internet_skills" value="yes" required> Yes<br>
+                <input type="radio" name="internet_skills" value="no" required> No
+            </div>
+
+            <!-- Language Proficiency -->
+            <div class="section">
+                <h2>6. Language Proficiency</h2>
+                <label>Are you fluent in English and able to engage with content that will be presented in English?</label>
+                <input type="radio" name="language_proficiency" value="yes" required> Yes<br>
+                <input type="radio" name="language_proficiency" value="no" required> No
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script language="JavaScript">turkSetAssignmentID()</script>
+</body>
+</html>
