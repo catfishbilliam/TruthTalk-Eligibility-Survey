@@ -77,15 +77,15 @@
             background-color: #218838;
         }
     </style>
-    <script type="text/javascript" src="https://s3.amazonaws.com/mturk-public/externalHIT_v1.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>TruthTalk Study Qualification Survey</h1>
 
-        <form id="mturk_form" method="post" action="https://www.mturk.com/mturk/externalSubmit">
-            <!-- Assignment ID -->
-            <input type="hidden" id="assignmentId" name="assignmentId" value="">
+        <!-- Survey Form -->
+        <form id="prolific_form" method="post" action="https://your-backend-endpoint-or-handler">
+            <!-- Capture Prolific Participant ID -->
+            <input type="hidden" id="PROLIFIC_PID" name="PROLIFIC_PID" value="">
 
             <!-- Age Requirement -->
             <div class="section">
@@ -163,6 +163,14 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-    <script language="JavaScript">turkSetAssignmentID()</script>
+
+    <script>
+        // Capture Prolific Participant ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const prolificPID = urlParams.get('PROLIFIC_PID');
+        if (prolificPID) {
+            document.getElementById('PROLIFIC_PID').value = prolificPID;
+        }
+    </script>
 </body>
 </html>
