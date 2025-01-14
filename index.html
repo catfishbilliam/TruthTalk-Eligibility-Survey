@@ -85,7 +85,11 @@
         <!-- Survey Form -->
         <form id="prolific_form" method="post" action="https://your-backend-endpoint-or-handler">
             <!-- Capture Prolific Participant ID -->
-            <input type="hidden" id="PROLIFIC_PID" name="PROLIFIC_PID" value="">
+             <div class="section">
+                <h2>Prolific ID</h2>
+                <label for="prolific_id">Please enter your Prolific ID:</label>
+                <input type="text" id="prolific_id" name="prolific_id" required>
+            </div>
 
             <!-- Age Requirement -->
             <div class="section">
@@ -158,13 +162,6 @@
                 <label>Are you fluent in English and able to engage with content that will be presented in English?</label>
                 <input type="radio" name="language_proficiency" value="yes" required> Yes<br>
                 <input type="radio" name="language_proficiency" value="no" required> No
-            </div>
-
-                        <!-- Prolific ID -->
-            <div class="section">
-                <h2>Prolific ID</h2>
-                <label for="prolific_id">Please enter your Prolific ID:</label>
-                <input type="text" id="prolific_id" name="prolific_id" required>
             </div>
 
             <button type="submit">Submit</button>
