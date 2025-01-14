@@ -160,17 +160,17 @@
                 <input type="radio" name="language_proficiency" value="no" required> No
             </div>
 
+                        <!-- Prolific ID -->
+            <div class="section">
+                <h2>Prolific ID</h2>
+                <label for="prolific_id">Please enter your Prolific ID:</label>
+                <input type="text" id="prolific_id" name="prolific_id" required>
+            </div>
+
             <button type="submit">Submit</button>
         </form>
     </div>
 
-    <script>
-        // Capture Prolific Participant ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const prolificPID = urlParams.get('PROLIFIC_PID');
-        if (prolificPID) {
-            document.getElementById('PROLIFIC_PID').value = prolificPID;
-        }
-    </script>
+   
 </body>
 </html>
